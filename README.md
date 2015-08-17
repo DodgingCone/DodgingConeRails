@@ -1,4 +1,4 @@
-#Readme
+#DodgingCone Rails
 
 > DodgingCone API - A life returning JSON models
 
