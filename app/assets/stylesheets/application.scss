@@ -3,10 +3,11 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "scaffolds";
 @import "welcome";
 
 body {
   > .container {
-    margin-top: 30px;
+    margin-top: 55px;
   }
 }
