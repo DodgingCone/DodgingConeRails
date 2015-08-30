@@ -1,5 +1,19 @@
-<div class="jumbotron">
-  <h1>Welcome</h1>
-  <p>DodgingCone is pure fun, so start playing right away!</p>
-  <p><%= link_to 'Login', new_player_session_path, :class => 'btn btn-primary btn-lg', :role => 'button' %></p>
-</div>
+<section class="welcome-view-wrapper">
+  <div class="jumbotron">
+    <div class="row">
+      <main class="col-md-6" role="main">
+        <header>
+          <h1>Welcome</h1>
+        </header>
+        <p>DodgingCone is pure fun, so start playing right away!</p>
+        <div class="welcome-actions">
+          <%= link_to 'Login', new_player_session_path, :class => 'btn btn-primary btn-lg', :role => 'button' %>
+          <%= link_to 'Sign Up', new_player_registration_path, :class => 'btn btn-info btn-lg', :role => 'button' %>
+        </div>
+      </main>
+      <div class="col-md-6 aside">
+        <img src="http://lorempixel.com/400/200/sports/" class="img-responsive img-thumbnail" alt="screenshoot">
+      </div>
+    </div>
+  </div>
+</section>
