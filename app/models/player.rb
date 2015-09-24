@@ -7,6 +7,7 @@ class Player < ActiveRecord::Base
   has_many :scores, dependent: :destroy
 
   validates :name, length: { maximum: 50 }
-  validates :username, length: { maximum: 25 }
+  validates :country, length: { maximum: 50 }
   validates :gender, length: { maximum: 25 }
+  validates :username, length: { maximum: 25 }
 end
