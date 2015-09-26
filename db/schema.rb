@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150924202102) do
+ActiveRecord::Schema.define(version: 20150925202951) do
 
   create_table "players", force: :cascade do |t|
     t.string   "name"
@@ -31,8 +31,10 @@ ActiveRecord::Schema.define(version: 20150924202102) do
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
     t.string   "country"
+    t.string   "authentication_token"
   end
 
+  add_index "players", ["authentication_token"], name: "index_players_on_authentication_token"
   add_index "players", ["email"], name: "index_players_on_email", unique: true
   add_index "players", ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true
 

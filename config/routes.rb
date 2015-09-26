@@ -1,7 +1,17 @@
 Rails.application.routes.draw do
-  resources :scores
-  get 'welcome/index'
-  
-  devise_for :players
   root 'welcome#index'
+
+  get 'welcome/index'
+
+  devise_scope :player do 
+    post 'custom_devise/sessions/create', defaults: { format: 'json' }
+  end
+
+  resources :scores
+
+  devise_for :players
+  
+  namespace :api, defaults: { format: 'json' } do
+    resources :scores
+  end
 end
