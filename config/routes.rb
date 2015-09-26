@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  resources :scores
+  root 'welcome#index'
+
   get 'welcome/index'
   
+  resources :scores
+  
   devise_for :players
-  root 'welcome#index'
+
+  namespace :api, defaults: { format: :json } do
+    resources :scores
+    
+    mount_devise_token_auth_for 'Player', at: 'auth'
+  end
 end
