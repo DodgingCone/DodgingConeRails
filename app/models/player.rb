@@ -4,6 +4,8 @@ class Player < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  include DeviseTokenAuth::Concerns::User
+
   has_many :scores, dependent: :destroy
 
   validates :name, length: { maximum: 50 }
