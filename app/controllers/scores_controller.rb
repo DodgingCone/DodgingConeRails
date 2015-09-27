@@ -3,6 +3,6 @@ class ScoresController < InheritedResources::Base
   before_action :authenticate_player!, except: [ :create ]
 
   def index
-    @scores = Score.all
+    @scores = Score.first(30)
   end
 end
