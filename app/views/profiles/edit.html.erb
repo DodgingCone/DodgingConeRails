@@ -1,0 +1,32 @@
+<div class="col-md-4">
+  <h1>Edit my profile</h1>
+
+  <% if @player.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@player.errors.count, "error") %> prohibited your profile from being updated:</h2>
+   
+      <ul>
+      <% @player.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <%= form_for @player, url: profiles_update_path do |f| %>
+    <div class="form-group">
+      <label class="sr-only">Name</label>
+      <%= f.text_field :name, class: "form-control", maxlength: 50, placeholder: "Full name" %>
+    </div>
+    <div class="form-group">
+      <label class="sr-only">Country</label>
+      <%= f.text_field :country, class: "form-control", maxlength: 50, placeholder: "Country where you were born or live" %>
+    </div>
+    <div class="form-group">
+      <label class="sr-only">Gender</label>
+      <%= f.text_field :gender, class: "form-control", maxlength: 25, placeholder: "Any gender you consider identified with" %>
+    </div>
+    <%= f.submit 'Update', class: "btn btn-primary" %>
+    <%= link_to 'Cancel', profiles_show_path, class: "btn btn-default" %>
+  <% end %>
+</div>

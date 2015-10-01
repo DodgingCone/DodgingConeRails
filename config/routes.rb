@@ -2,7 +2,12 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get 'welcome/index'
-  
+
+  # See and edit my profile
+  get 'profiles/edit'
+  get 'profiles/show'
+  patch 'profiles/update'
+
   resources :scores
   
   devise_for :players
