@@ -4,10 +4,12 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "scaffolds";
+@import "comments";
+@import "profiles";
+@import "scores";
 @import "welcome";
 
 body {
-  > .container {
-    margin-top: 55px;
-  }
+  padding-bottom: 30px;
+  padding-top: 70px;
 }

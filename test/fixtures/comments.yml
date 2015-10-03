@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comment: MyText
+  player_id: 
+  score_id: 
+
+two:
+  comment: MyText
+  player_id: 
+  score_id: 

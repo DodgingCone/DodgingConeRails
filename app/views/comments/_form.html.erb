@@ -1,0 +1,7 @@
+<%= form_for([@score, @score.comments.build]) do |f| %>
+  <div class="form-group">
+    <%= f.label :body, class: "sr-only" %>
+    <%= f.text_area :body, class: "form-control", placeholder: "Comment on the score.." %>
+  </div>
+  <%= f.submit 'Crear', class: "btn btn-default" %>
+<% end %>

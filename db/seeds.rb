@@ -5,3 +5,47 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Player.create(
+  email: 'test@test.com', 
+  password: 'testtest'
+)
+
+john = Player.create(
+  email: 'john@test.com', 
+  password: 'johnjohn',
+  name: 'John Lennon',
+  country: 'Somewhere',
+  gender: 'Male'
+)
+
+mary = Player.create(
+  email: 'mary@test.com', 
+  password: 'marymary',
+  name: 'Mary Hill',
+  country: 'Somewhere',
+  gender: 'Female'
+)
+
+highest_score = nil
+
+5.times do |i|
+  highest_score = Score.create(
+    score: i+1*100, 
+    player: john
+  )
+end
+
+5.times do |i|
+  Comment.create(
+    body: "This is the comment number #{i}.",
+    score: highest_score,
+    player: mary
+  )
+  
+  Comment.create(
+    body: "This is another comment, number #{i}.",
+    score: highest_score,
+    player: john
+  )
+end

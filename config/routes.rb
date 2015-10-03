@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get 'profiles/show'
   patch 'profiles/update'
 
-  resources :scores
+  resources :scores, defaults: { format: 'html' } do
+    resources :comments, shallow: true
+  end
   
   devise_for :players
 

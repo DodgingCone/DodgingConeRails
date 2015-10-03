@@ -9,6 +9,7 @@ class Player < ActiveRecord::Base
   include ActiveModel::Validations
 
   has_many :scores, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :name, length: { maximum: 50 }
   validates :country, length: { maximum: 50 }
