@@ -7,14 +7,16 @@ class ProfilesController < ApplicationController
   end
 
   def show
-    @player = current_player
+    @player = Player.find(params[:id])
+    
+    @highest_score = @player.scores.try(:last)
   end
 
   def update
     @player = current_player
 
     if @player.update(player_params)
-      redirect_to profiles_show_path
+      redirect_to profile_path(@player)
     else
       render 'edit'
     end

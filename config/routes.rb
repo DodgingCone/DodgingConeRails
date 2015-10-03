@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # See and edit my profile
   get 'profiles/edit'
-  get 'profiles/show'
+  get 'profiles/:id', to: 'profiles#show', as: 'profile'
   patch 'profiles/update'
 
   resources :scores, defaults: { format: 'html' } do

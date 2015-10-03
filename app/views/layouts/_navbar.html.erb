@@ -14,7 +14,7 @@
         <div class="collapse navbar-collapse" id="navbar-collapse">
           <%= nav_bar do %>
             <%= nav_link 'Scores', scores_path %>
-            <%= nav_link 'My profile', profiles_show_path %>
+            <%= nav_link 'My profile', profile_path(current_player) %>
           <% end %>
           <ul class="nav navbar-nav navbar-right">
             <li>

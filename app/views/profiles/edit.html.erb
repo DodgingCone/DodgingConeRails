@@ -27,6 +27,6 @@
       <%= f.text_field :gender, class: "form-control", maxlength: 25, placeholder: "Any gender you consider identified with" %>
     </div>
     <%= f.submit 'Update', class: "btn btn-primary" %>
-    <%= link_to 'Cancel', profiles_show_path, class: "btn btn-default" %>
+    <%= link_to 'Cancel', profile_path(@player), class: "btn btn-default" %>
   <% end %>
 </div>

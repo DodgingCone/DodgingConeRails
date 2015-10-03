@@ -10,3 +10,9 @@
   <strong>Gender:</strong>
   <%= @player.gender.blank? ? "none" : @player.gender %>
 </p>
+<% if @highest_score %>
+<p>
+  <strong>Highest score:</strong>
+  <%= @highest_score.score %>
+</p>
+<% end %>

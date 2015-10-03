@@ -9,6 +9,6 @@
   <% end %>
   <p><%= comment.body %></p>
   <footer>
-    By <%= comment.player.name %>
+    By <%= link_to comment.player.name, profile_path(comment.player) %>
   </footer>
 </blockquote>
