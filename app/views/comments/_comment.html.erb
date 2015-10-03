@@ -1,7 +1,7 @@
 <blockquote id="<%= comment.id %>" class="comment">
-  <a href="#<%= comment.id %>" class="comment-link">
+  <%= link_to "\##{comment.id}", class: 'comment-link' do %>
     <i class="glyphicon glyphicon-link"></i>
-  </a>
+  <% end %>
   <% if current_player.id == comment.score.player.id %>
     <%= link_to comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }, class: 'comment-remove' do %>
       <i class="glyphicon glyphicon-trash"></i>
@@ -9,6 +9,6 @@
   <% end %>
   <p><%= comment.body %></p>
   <footer>
-    By <%= current_player.id == comment.player.id ? 'myself' : comment.player.name %>
+    By <%= comment.player.name %>
   </footer>
 </blockquote>

@@ -1,0 +1,5 @@
+<% if @score.comments.any? %>
+  <%= render @score.comments %>
+<% else %>
+ <p class="lead text-muted">No comments yet</p>
+<% end %>
