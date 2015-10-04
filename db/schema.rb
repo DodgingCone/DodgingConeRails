@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003005913) do
+ActiveRecord::Schema.define(version: 20151003222942) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20151003005913) do
     t.string   "name"
     t.date     "birthday"
     t.string   "gender"
-    t.string   "username"
+    t.string   "username",                                 null: false
     t.datetime "created_at",                               null: false
     t.datetime "updated_at",                               null: false
     t.string   "email",                  default: "",      null: false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20151003005913) do
   add_index "players", ["email"], name: "index_players_on_email", unique: true
   add_index "players", ["reset_password_token"], name: "index_players_on_reset_password_token", unique: true
   add_index "players", ["uid", "provider"], name: "index_players_on_uid_and_provider", unique: true
+  add_index "players", ["username"], name: "index_players_on_username", unique: true
 
   create_table "scores", force: :cascade do |t|
     t.integer  "score"

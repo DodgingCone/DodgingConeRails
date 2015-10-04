@@ -8,11 +8,13 @@
 
 Player.create(
   email: 'test@test.com', 
+  username: 'test', 
   password: 'testtest'
 )
 
 john = Player.create(
   email: 'john@test.com', 
+  username: 'john', 
   password: 'johnjohn',
   name: 'John Lennon',
   country: 'Somewhere',
@@ -21,6 +23,7 @@ john = Player.create(
 
 mary = Player.create(
   email: 'mary@test.com', 
+  username: 'mary', 
   password: 'marymary',
   name: 'Mary Hill',
   country: 'Somewhere',
