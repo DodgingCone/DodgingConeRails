@@ -7,7 +7,7 @@
 
       <h2 class="text-muted">
         Made by 
-        <%= link_to @score.player.name, profile_path(@score.player) %>
+        <%= link_to @score.player.username, profile_path(@score.player) %>
         in <%= @score.created_at.to_formatted_s(:long_ordinal) %>
       </h2>
 

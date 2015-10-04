@@ -15,7 +15,7 @@
       <tr>
         <th scope="row"><%= index + 1 %></th>
         <td><%= link_to score.score, score %></td>
-        <td><%= score.player.name %></td>
+        <td><%= score.player.username %></td>
         <td><%= score.created_at.to_formatted_s(:day_month_and_year) %></td>
       </tr>
     <% end %>
