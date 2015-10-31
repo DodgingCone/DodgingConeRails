@@ -3,6 +3,6 @@ class ScoresController < InheritedResources::Base
   before_action :authenticate_player!
 
   def index
-    @scores = Score.first(30)
+    @scores = Score.order(score: :desc).first(30)
   end
 end
