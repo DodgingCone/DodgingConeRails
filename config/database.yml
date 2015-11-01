@@ -18,7 +18,6 @@ psql: &psql
   username: <%= ENV['PG_USER'] %>
   password: <%= ENV['PG_PASSWORD'] %>
   host: localhost
-  port: 5433
   encoding: unicode
   pool: 10
 
