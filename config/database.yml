@@ -1,5 +1,4 @@
 # SQLite version 3.x
-#   gem install sqlite3
 #
 #   Ensure the SQLite 3 gem is defined in your Gemfile
 #   gem 'sqlite3'
@@ -8,6 +7,21 @@ default: &default
   adapter: sqlite3
   pool: 5
   timeout: 5000
+
+# PostgreSQL
+#
+#   Ensure the PostgreSQL gem is defined in your Gemfile
+#   gem 'pg'
+#
+psql: &psql
+  adapter: postgresql
+  username: <%= ENV['PG_USER'] %>
+  password: <%= ENV['PG_PASSWORD'] %>
+  host: localhost
+  port: 5433
+  encoding: unicode
+  pool: 10
+
 
 development:
   <<: *default
@@ -21,5 +35,5 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  <<: *psql
+  database: dodging_cone
