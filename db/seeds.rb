@@ -12,43 +12,210 @@ Player.create(
   password: 'testtest'
 )
 
-john = Player.create(
-  email: 'john@test.com', 
-  username: 'john', 
-  password: 'johnjohn',
-  name: 'John Lennon',
-  country: 'Somewhere',
+
+
+#
+# Users list
+# # # # # # #
+
+jose = Player.create(
+  email: 'jose@email.com', 
+  username: 'josefinhio', 
+  password: 'josejose',
+  name: 'Jose Gianinni',
+  country: 'Uruguay',
   gender: 'Male'
 )
 
-mary = Player.create(
-  email: 'mary@test.com', 
-  username: 'mary', 
-  password: 'marymary',
-  name: 'Mary Hill',
-  country: 'Somewhere',
+tomas = Player.create(
+  email: 'tomas@email.com', 
+  username: 'tomas666', 
+  password: 'tomastomas',
+  name: 'Tomas DaVinci',
+  country: 'Belgium',
+  gender: 'Male'
+)
+
+maria = Player.create(
+  email: 'maria@email.com', 
+  username: 'maria_55', 
+  password: 'mariamaria',
+  name: 'Maria Elena',
+  country: 'Argentina',
   gender: 'Female'
 )
 
+ana = Player.create(
+  email: 'ana@email.com', 
+  username: 'anaaa', 
+  password: 'anaana',
+  name: 'Ana Ramos',
+  country: 'Colombia',
+  gender: 'Female'
+)
+
+ceci = Player.create(
+  email: 'ceci@email.com', 
+  username: 'cecilove', 
+  password: 'ceciceci',
+  name: 'Ceci Roca',
+  country: 'Colombia',
+  gender: 'Trans'
+)
+
+fer = Player.create(
+  email: 'fer@email.com', 
+  username: 'ferchu', 
+  password: 'ferfer',
+  name: 'Fernando Rua',
+  country: 'Peru',
+  gender: 'Male'
+)
+
+
+
+#
+# Scores list
+# # # # # # #
+
 highest_score = nil
+four_score = nil
+five_score = nil
+six_score = nil
 
 5.times do |i|
   highest_score = Score.create(
-    score: i+1*100, 
-    player: john
+    score: i+1*10, 
+    player: ceci
   )
 end
 
-5.times do |i|
-  Comment.create(
-    body: "This is the comment number #{i}.",
-    score: highest_score,
-    player: mary
-  )
-  
-  Comment.create(
-    body: "This is another comment, number #{i}.",
-    score: highest_score,
-    player: john
-  )
-end
+Score.create(
+  score: 47, 
+  player: fer
+)
+
+four_score = Score.create(
+  score: 39, 
+  player: ana
+)
+
+five_score = Score.create(
+  score: 37, 
+  player: ana
+)
+
+six_score = Score.create(
+  score: 36, 
+  player: ana
+)
+
+Score.create(
+  score: 33, 
+  player: ana
+)
+
+Score.create(
+  score: 26, 
+  player: ana
+)
+
+Score.create(
+  score: 26, 
+  player: tomas
+)
+
+Score.create(
+  score: 22, 
+  player: tomas
+)
+
+Score.create(
+  score: 18, 
+  player: jose
+)
+
+Score.create(
+  score: 18, 
+  player: tomas
+)
+
+Score.create(
+  score: 18, 
+  player: tomas
+)
+
+Score.create(
+  score: 13, 
+  player: jose
+)
+
+Score.create(
+  score: 12, 
+  player: jose
+)
+
+Score.create(
+  score: 11, 
+  player: jose
+)
+
+
+
+#
+# Users list
+# # # # # # #
+
+Comment.create(
+  body: "I love the way you bet scores :)",
+  score: highest_score,
+  player: ana
+)
+
+Comment.create(
+  body: ":D",
+  score: highest_score,
+  player: ceci
+)
+
+Comment.create(
+  body: "Well played my friend",
+  score: highest_score,
+  player: tomas
+)
+
+Comment.create(
+  body: "I see the game as before and after this score",
+  score: highest_score,
+  player: fer
+)
+
+Comment.create(
+  body: "Amazing, just amazing",
+  score: five_score,
+  player: ceci
+)
+
+Comment.create(
+  body: "Can't get this good easily",
+  score: five_score,
+  player: fer
+)
+
+Comment.create(
+  body: "...but i try :p",
+  score: five_score,
+  player: fer
+)
+
+Comment.create(
+  body: "Funny fact, it was hard to achieve few weeks ago",
+  score: six_score,
+  player: ana
+)
+
+Comment.create(
+  body: "You Ana spoken the true lady",
+  score: six_score,
+  player: jose
+)
