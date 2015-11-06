@@ -48,7 +48,7 @@ maria = Player.create(
 ana = Player.create(
   email: 'ana@email.com', 
   username: 'anaaa', 
-  password: 'anaana',
+  password: 'anaanaana',
   name: 'Ana Ramos',
   country: 'Colombia',
   gender: 'Female'
@@ -66,7 +66,7 @@ ceci = Player.create(
 fer = Player.create(
   email: 'fer@email.com', 
   username: 'ferchu', 
-  password: 'ferfer',
+  password: 'ferferfer',
   name: 'Fernando Rua',
   country: 'Peru',
   gender: 'Male'
