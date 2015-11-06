@@ -85,7 +85,7 @@ six_score = nil
 
 5.times do |i|
   highest_score = Score.create(
-    score: i+1*10, 
+    score: (i+1)*10, 
     player: ceci
   )
 end
