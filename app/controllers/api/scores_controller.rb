@@ -8,12 +8,12 @@ class Api::ScoresController < Api::ApiController
   end
 
   def create
-    @player = current_player
+    player = current_player
 
-    scores = @player.scores
+    scores = player.scores
 
-    # Forbid same score to be saved
-    if scores.find_by_score(params["score"]) != nil
+    # Forbid a same score from a same user
+    if scores.where(score: params["score"], player: player).size > 0
       render json: nil, status: :bad_request
       return
     end
