@@ -92,22 +92,26 @@ end
 
 Score.create(
   score: 47, 
-  player: fer
+  player: fer,
+  created_at: DateTime.parse('2014-12-25 12:24:05')
 )
 
 four_score = Score.create(
   score: 39, 
-  player: ana
+  player: ana,
+  created_at: DateTime.parse('2015-10-11 08:11:50')
 )
 
 five_score = Score.create(
   score: 37, 
-  player: ana
+  player: ana,
+  created_at: DateTime.parse('2015-11-10 08:11:50')
 )
 
 six_score = Score.create(
   score: 36, 
-  player: ana
+  player: ana,
+  created_at: DateTime.parse('2015-10-10 15:18:18')
 )
 
 Score.create(
@@ -122,12 +126,14 @@ Score.create(
 
 Score.create(
   score: 26, 
-  player: tomas
+  player: tomas,
+  created_at: DateTime.parse('2015-06-08 16:17:18')
 )
 
 Score.create(
   score: 22, 
-  player: tomas
+  player: tomas,
+  created_at: DateTime.parse('2015-09-08 01:45:22')
 )
 
 Score.create(
@@ -137,12 +143,8 @@ Score.create(
 
 Score.create(
   score: 18, 
-  player: tomas
-)
-
-Score.create(
-  score: 18, 
-  player: tomas
+  player: tomas,
+  created_at: DateTime.parse('2015-06-08 18:25:22')
 )
 
 Score.create(
@@ -188,6 +190,12 @@ Comment.create(
   body: "I see the game as before and after this score",
   score: highest_score,
   player: fer
+)
+
+Comment.create(
+  body: "Keep rocking it!",
+  score: four_score,
+  player: ana
 )
 
 Comment.create(
